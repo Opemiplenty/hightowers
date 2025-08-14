@@ -1,0 +1,114 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b6fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-outline {
+  border: 2px solid #4b6fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #4b6fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #4b6fff;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+ position: relative;
+ min-height: 88vh;
+ display: flex;
+ align-items: center;
+ padding: 8vh 5vw;
+ overflow: hidden;
+ border-radius: 28px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #c0d4ff;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #4b6fff;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: #4b6fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #365ad4;
+}
+
+.play-btn {
+  background-color: white;
+  color: #4b6fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  background-color: #4b6fff;
+  color: white;
+}
