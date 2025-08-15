@@ -85,6 +85,54 @@
   </div>
 </section>
 
+<!--Features-->
+<section class="features">
+  <div class="heading">
+    <h2>Journey To The Sky Made Simple!</h2>
+    <p>Effortless Planning for Your Next Adventure</p>
+  </div>
+
+  <div class="cards">
+    <!-- Card 1 -->
+    <div class="card" onclick="activateCard(this)">
+      <div class="icon">📑</div>
+      <h3>Seamless Booking Process</h3>
+      <p class="hidden-text">
+        Easy Reservations, One Click Away.<br> From flights and accommodation to activities and transfers, everything you need is available at your fingertips, making travel effortless.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="activateCard(this)">
+      <div class="icon">⛰️</div>
+      <h3>Tailored Itineraries</h3>
+      <p class="hidden-text">
+        Personalized journeys built just for you, with activities and experiences that match your style.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="activateCard(this)">
+      <div class="icon">🗺️</div>
+      <h3>Expert Local Insights</h3>
+      <p class="hidden-text">
+        Explore with confidence, guided by the knowledge and tips of trusted local experts.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function activateCard(element) {
+    // Remove "active" from all cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.classList.remove('active');
+    });
+
+    // Add "active" to clicked card
+    element.classList.add('active');
+  }
+</script>
+
 
 </head>
 <body>
