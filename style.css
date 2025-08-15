@@ -150,3 +150,255 @@ body {
     background-position: center, right -2vw bottom -2vh, center;
     background-size: 100% 100%, clamp (300px, 45vw, 820px) auto, cover;
 }
+/*Gallery */
+:root{
+  --text: #2a2a2a;
+  --muted: #7b8a9b;
+  --card-bg: #ffffff;
+  --pill-bg: #e9f3ff;
+  --pill-text: #2f73ff;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --radius-lg: 18px;   
+  --radius-sm: 12px;   
+}
+
+*{box-sizing:border-box}
+
+.destinations{
+  max-width: 1100px;
+  margin: 72px auto;
+  padding: 0 20px;
+  text-align: center;
+  color: var(--text);
+}
+
+.destinations head h2{
+  font-size: clamp(22px, 2.2vw + 10px, 32px);
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.destinations head p{
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+/* grid */
+.destinations-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  justify-items: center;
+}
+
+@media (max-width: 900px){
+  .destinations-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 580px){
+  .destinations-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* card */
+.dest-card{
+  width: 320px;               
+  background: transparent;   
+}
+
+.dest-card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+.dest-card body{
+  background: var(--card-bg);
+  margin: 12px auto 0;
+  padding: 14px 16px 10px;
+  border-radius: var(--radius-sm);
+  width: calc(100% - 24px);
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+  text-align: left;
+}
+
+.dest-card title{
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dest-card-place{
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.dest-card-rating{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.dest-card rating::before{
+  content: "fa-solid fa-star"
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+/*Features*/
+features {
+  text-align: left;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.features .heading h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.features .heading p {
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Card container */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 25px;
+  width: 380px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+/* Hide extra text by default */
+.card .extra-text {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Active (clicked) card */
+.card.active {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.card.active .icon {
+  color: #fff;
+}
+
+.card.active .extra-text {
+  display: block;
+}
+/* Booking Section */
+.booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+/* Image part */
+.image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Text content */
+.content {
+  flex: 1;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.content p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Button styling */
+
+.btn {
+  display: inline-block;
+  background: url("header-bg.jpg") no-repeat center center/cover; /* your picture */
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
+
+/* Responsive (mobile view) */
+@media (max-width: 768px) {
+  .booking {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+}
