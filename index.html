@@ -200,8 +200,82 @@ We provide curated recommendations for dining, sightseeing, and hidden gems, so 
   </div>
 </section>
 
+<!--Testimonials Section-->
+  <section class="testimonials-section">
+  <div class="content-container">
+    <h2 class="main-heading">Loved By Over Thousand Travelers</h2>
+    <p class="sub-heading">Discover the stories of wanderlust and cherished memories through the eyes of our valued clients.</p>
+  </div>
+
+  <div class="cards-container">
+    <div class="testimonial-card" data-card-id="1">
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">
+        Skywings has completely transformed my travel experience. From finding hidden gems in bustling cities to discovering serene retreats off the beaten path, every detail was thoughtfully arranged. I can't recommend Skywings enough for anyone looking to elevate their travel experience!
+      </p>
+      <div class="user-info">
+        <img src="client-1.jpg" alt="John Adams" class="user-avatar">
+        <div class="user-details">
+          <p class="user-name">John Adams</p>
+          <p class="user-title">Travel Blogger</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-card-id="2">
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">
+        My recent adventure with Skywings was nothing short of spectacular. The personalized itineraries and recommendations they provided led me to extraordinary locations that I would never have found on my own. I'm already planning my next adventure with them!
+      </p>
+      <div class="user-info">
+        <img src="client-2.jpg" alt="Emily Thompson" class="user-avatar">
+        <div class="user-details">
+          <p class="user-name">Emily Thompson</p>
+          <p class="user-title">Adventure Enthusiast</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" data-card-id="3">
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">
+        Skywings offered a transformative experience for my research into historic landmarks. The unique aerial perspective and provided a new level of appreciation insight into the sites I studied. I highly recommend their services to fellow historians and cultural enthusiasts.
+      </p>
+      <div class="user-info">
+        <img src="client-3.jpg" alt="Sarah Lee" class="user-avatar">
+        <div class="user-details">
+          <p class="user-name">Sarah Lee</p>
+          <p class="user-title">Cultural Historian</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-card" data-card-id="4">
+      <div class="stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="testimonial-text">
+        Finding a balance between work and travel can be challenging, but Skywings made it effortless. Their efficient planning and excellent recommendations helped me maximize my downtime and enjoy every moment of my trip. I look forward to working with them again on future travels.
+      </p>
+      <div class="user-info">
+        <img src="client-4.jpg" alt="David Patel" class="user-avatar">
+        <div class="user-details">
+          <p class="user-name">David Patel</p>
+          <p class="user-title">Business Executive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<!--Javascript for Features-->
 <script>
   function activateCard(element) {
     // Remove "active" from all cards
@@ -212,6 +286,18 @@ We provide curated recommendations for dining, sightseeing, and hidden gems, so 
     // Add "active" to clicked card
     element.classList.add('active');
   }
+</script>
+
+<!--Javascript for Testimonials-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.testimonial-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // First, remove the 'active' class from all cards
+      cards.forEach(c => c.classList.remove('active'));
+
 </script>
 
 
