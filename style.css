@@ -11,13 +11,16 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
+  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0;
+  margin: 0;
   background-color: white;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 10;
 }
@@ -34,6 +37,9 @@ body {
   padding: 0;
   display: flex;
   gap: 1.5rem;
+  overflow: visible;
+  transition: max-height 0.3s ease-in-out;
+  direction: column;
 }
 
 .nav-menu a {
@@ -42,7 +48,11 @@ body {
   font-weight: bold;
 }
 .menu-toggle{
-  display: none;
+  display: flex;
+  cursor: pointer;
+  background: none;
+  border: none;
+
 }
 
 .btn-outline {
@@ -100,6 +110,14 @@ padding: 15px 0;
 
 .hamburger-btn { 
 display: block; 
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out
 }
 
     .menu-toggle {
