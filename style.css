@@ -41,7 +41,7 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-#menu-toggle{
+.menu-toggle{
   display: none;
 }
 
@@ -98,7 +98,7 @@ padding: 15px 0;
 display: block; 
 }
 
-    #menu-toggle {
+    .menu-toggle {
        display: block;
       }
 }
