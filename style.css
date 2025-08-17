@@ -28,13 +28,13 @@ body {
   color: #4b6fff;
 }
 
-.nav-links {
+.nav-menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-.nav-links a {
+.nav-menu a {
   color: #4b6fff;
   text-decoration: none;
   font-weight: bold;
@@ -54,6 +54,44 @@ body {
   color: white;
 }
 
+.hamburger menu{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Mobile styles */
+ @media (max-width: 768px) {
+.nav-menu { display: none;
+flex-direction: column;
+position: absolute; 
+top: 60px; 
+left: 0; 
+width: 100%;
+ background-color: #1a73e8; 
+text-align: center;
+ padding: 20px 0;
+ }
+ } 
+
+.nav-menu.active { 
+display: flex; 
+} 
+.nav-menu li { 
+padding: 15px 0; 
+}
+
+.hamburger-menu { 
+display: block; 
+}
+
+
 
 /* ---------- hero ---------- */
 .hero{
@@ -65,7 +103,7 @@ body {
   overflow:hidden;
   border-radius:28px;
   background:
-    linear-gradient(90deg, rgba(6,20,60,.70) 0%, rgba(6,20,60,.45) 40%, rgba(6,20,60,.15) 70%, rgba(6,20,60,0) 100%),
+    linear-gradient(90deg, rgba(6,20,60,.40) 0%, rgba(6,20,60,.25) 40%, rgba(6,20,60,.10) 70%, rgba(6,20,60,0) 100%),
     url("header-bg.jpg") center / cover no-repeat;
 }
 
@@ -641,7 +679,7 @@ body {
   color: white;
 }
 .footer {
-  background: grey;
+  background: lightgray;
   padding: 50px 20px;
   color: #333;
   font-family: Arial, sans-serif;
