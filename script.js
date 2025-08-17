@@ -32,10 +32,10 @@
     navMenu.classList.toggle('active');
   });
   const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-menu');
+const navMenu = document.getElementById('nav-menu');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  navMenu.classList.toggle('menu-open');
   const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
   menuToggle.setAttribute('aria-expanded', !isExpanded);
 });
