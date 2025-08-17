@@ -68,7 +68,8 @@ body {
 
 /* Mobile styles */
  @media (max-width: 768px) {
-.nav-menu { display: none;
+.nav-menu {
+ display: none;
 flex-direction: column;
 position: absolute; 
 top: 60px; 
@@ -78,7 +79,7 @@ width: 100%;
 text-align: center;
  padding: 20px 0;
  }
- } 
+
 
 .nav-menu.active { 
 display: flex; 
@@ -90,6 +91,7 @@ padding: 15px 0;
 .hamburger-menu { 
 display: block; 
 }
+ }
 
 
 
