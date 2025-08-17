@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Towers</title>
 <link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -273,37 +275,56 @@ We provide curated recommendations for dining, sightseeing, and hidden gems, so 
     </div>
   </div>
 </section>
+<footer class="footer">
+  <div class="footer-container">
 
+    <!-- Brand/About -->
+    <div class="footer-col">
+      <h3>HighTowers</h3>
+      <p>
+        Explore the world with ease and excitement through our comprehensive travel platform.
+        Your journey begins here, where seamless planning meets unforgettable experiences.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
 
-<!--Javascript for Features-->
-<script>
-  function activateCard(element) {
-    // Remove "active" from all cards
-    document.querySelectorAll('.card').forEach(card => {
-      card.classList.remove('active');
-    });
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Cruise</a></li>
+      </ul>
+    </div>
 
-    // Add "active" to clicked card
-    element.classList.add('active');
-  }
-</script>
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-phone"></i> +91 9876543210</p>
+      <p><i class="fas fa-envelope"></i> info@highTowers</p>
+      <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+    </div>
 
-<!--Javascript for Testimonials-->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.testimonial-card');
+    <!-- Subscribe -->
+    <div class="footer-col">
+      <h4>Subscribe</h4>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+<div class="footer-bottom">
+  <p>@ 2025 Olukoga Opemipo. All rights reserved.</p>
+</div>
+</div>
+</footer>
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      // First, remove the 'active' class from all cards
-      cards.forEach(c => c.classList.remove('active'));
-
-</script>
-
-
-</head>
-<body>
-    
 </body>
 </html>
   
