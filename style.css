@@ -132,7 +132,7 @@ display: block;
     color: #333;
     opacity:.9;
      margin-bottom:8px; 
-     font-size:.12rem;
+     font-size:.9rem;
     }
 .hero h1{
     font-size: clamp(2.7rem, 5.5vw, 4.5rem); 
@@ -151,7 +151,7 @@ display: block;
     margin-top:14px;
 }
 .btn-primary{
-    background:var(--brand); 
+    background: blue; 
     color:#fff;
     text-decoration:none; 
     font-weight:700;
