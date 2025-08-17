@@ -54,7 +54,7 @@ body {
   color: white;
 }
 
-.hamburger menu{
+.hamburger-btn{
   display: none;
   cursor: pointer;
 }
@@ -88,7 +88,7 @@ display: flex;
 padding: 15px 0; 
 }
 
-.hamburger-menu { 
+.hamburger-btn { 
 display: block; 
 }
  }
