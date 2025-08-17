@@ -25,9 +25,8 @@
   });
 });
   /*Menu-bar*/
-    document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.getElementById('hamburger-btn');
-  const navMenu = document.getElementById('mobile-menu');
+  const navMenu = document.getElementById('nav-menu');
 
   hamburgerBtn.addEventListener('click', () => {
     navMenu.classList.toggle('active');
