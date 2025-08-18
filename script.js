@@ -31,11 +31,11 @@
   hamburgerBtn.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
-  const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
+  const menuToggle = document.querySelector('menu-toggle');
+const navMenu = document.querySelector('nav-menu');
 
 menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('menu-open');
+  navMenu.classList.toggle('active');
   const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
   menuToggle.setAttribute('aria-expanded', !isExpanded);
 });
