@@ -69,16 +69,27 @@ body {
 /*Media query for desktop*/
  @media (max-width: 769px) {
 
+    .off-screen-menu,
+    .ham-menu{
+      display: none;
+    }
+
+    .navbar{
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
   .nav-menu{
     display: flex;
-    max-height: none;
-    position: static;
-    gap: 15px;
+    gap: 4.5rem;
     flex-direction: row;
   }
 
   .nav-menu li{
     margin-left: 20px;
+  }
+  .btn-outline{
+    display: block;
   }
 }
 
@@ -92,6 +103,9 @@ body {
   z-index: 1000;
   background-color: #2e6ff3;
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar {
@@ -114,7 +128,7 @@ body {
     align-items: center;
     text-align: center;
     font-size: 3rem;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
 
   }
@@ -122,6 +136,22 @@ body {
   .off-screen-menu.active{
     right: 0;
   }
+
+  .off-screen-menu .nav-menu{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+    .off-screen-menu .nav-menu li{
+      margin: 0;
+    }
+      .off-screen-menu .nav-menu li a {
+        color: white;
+        font-size: 2rem;
+      }
+
+      }
+
 
 .nav-menu.active { 
 max-height: 500px;
@@ -147,23 +177,25 @@ transition: max-height 0.3s ease-in-out;
 .btn-outline{
   display: block;
 }
-}
+
 .ham-menu{
   height: 50px;
   width: 50px;
   margin-left: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .ham-menu span{
   height: 5px;
   width: 100%;
-  background-color: white;`
+  background-color: white;
   border-radius: 25px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:  translate (-50%, -50%);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .ham-menu span:nth-child(1){
@@ -175,14 +207,14 @@ transition: max-height 0.3s ease-in-out;
 
 .ham-menu.active span:nth-child(1){
   top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: rotate(45deg);
 }
 .ham-menu.active span:nth-child(2){
   opacity: 0;
 }
 .ham-menu.active span:nth-child(3){
   top: 50%;
-  transform: translate(-50%; 50%) rotate(-45deg)
+  transform: rotate(-45deg)
 }
 
 
