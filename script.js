@@ -25,17 +25,11 @@
   });
 });
   /*Menu-bar*/
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const navMenu = document.getElementById('nav-menu');
+  const hamMenu = document.querySelector('.ham-menu');
+  const offScreenMenu = document.querySelector('.off-screen-menu');
 
-  hamburgerBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+  hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active')
   });
-  const menuToggle = document.querySelector('menu-toggle');
-const navMenu = document.querySelector('nav-menu');
-
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-  menuToggle.setAttribute('aria-expanded', !isExpanded);
-});
+   

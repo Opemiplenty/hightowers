@@ -37,7 +37,7 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 4.5rem;
   overflow: visible;
   transition: max-height 0.3s ease-in-out;
   direction: column;
@@ -48,16 +48,9 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-.menu-toggle{
-  display: flex;
-  cursor: pointer;
-  background: none;
-  border: none;
-
-}
 
 .btn-outline {
-  display: block;
+  display: flex;
   border: 2px solid #4b6fff;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -71,26 +64,16 @@ body {
   color: white;
 }
 
-.hamburger-btn{
-  display: none;
-  cursor: pointer;
-}
 
-.bar{
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-}
+
 /*Media query for desktop*/
  @media (max-width: 769px) {
-  .menu-toggle{
-    display: none;
-  }
+
   .nav-menu{
     display: flex;
     max-height: none;
     position: static;
+    gap: 15px;
     flex-direction: row;
   }
 
@@ -116,13 +99,29 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.bar{
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-}
+
+.off-screen-menu{
+    background-color: blue;
+    height:  100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+
+
+  }
+
+  .off-screen-menu.active{
+    right: 0;
+  }
 
 .nav-menu.active { 
 max-height: 500px;
@@ -145,16 +144,49 @@ transition: max-height 0.3s ease-in-out;
   padding: 15px;
   text-align: center;
 }
-
-.hamburger-btn { 
-display: block;
-cursor: pointer;
-}
-
 .btn-outline{
   display: block;
 }
 }
+.ham-menu{
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+.ham-menu span{
+  height: 5px;
+  width: 100%;
+  background-color: white;`
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate (-50%, -50%);
+  transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1){
+  top: 25%;
+}
+.ham-menu span:nth-child(3){
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+  top: 50%;
+  transform: translate(-50%; 50%) rotate(-45deg)
+}
+
+
+
 
 
 /* ---------- hero ---------- */
